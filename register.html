@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>myGisWeb</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/iframe.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <div class="header-blue" style="height: 100%">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+                <div class="container-fluid"><a class="navbar-brand" href="start.html">AnimalSitter</a>
+                    <div class="collapse navbar-collapse"
+                         id="navcol-1"><span class="navbar-text"> <a class="login" href="LogIn.html">Log In</a></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="row register-form">
+                <div class="col-md-8 offset-md-2">
+                    <form class="custom-form" id="register-from" style="text-transform: capitalize">
+                        <h1>Sign UP</h1>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="first-name-input-field" >First Name&nbsp;</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="first-name-input-field"placeholder="First Name" type="text"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="last-name-input-field">Last Name&nbsp;</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="last-name-input-field" placeholder="Last Name" type="text"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="email-input-field" placeholder="Email" type="email"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="phone-input-field">phone</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="phone-input-field" placeholder="Phone" type="number"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="animal-input-field">Animal kind</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="animal-input-field" placeholder="Animals you will want to keep" type="text"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="address-input-field">address</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="address-input-field" placeholder="Address" type="text"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="city-input-field">city</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="city-input-field" placeholder="City" type="text"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="price-input-field">price per hour</label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="price-input-field" placeholder="Price" type="number"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="password-input-field">Password </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="password-input-field" placeholder="Password" type="password"></div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-password-input-field">Repeat Password </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" id="repeat-password-input-field" placeholder="Repeat Password" type="password"></div>
+                        </div>
+                        <button class="btn btn-light submit-button" id="signUp" type="button">Submit</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">AnimalSitter © 2020</p>
+        </footer>
+    </div>
+    <script src="./firebase.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

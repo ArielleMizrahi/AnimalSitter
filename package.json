@@ -1,0 +1,15 @@
+{
+  "name": "gis-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "firebase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "firebase": "^7.19.1"
+  }
+}
